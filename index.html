@@ -108,24 +108,43 @@
     }
 
     .hero-logos img {
-  height: 40px;        /* controls size */
-  width: auto;         /* keeps proportions */
-  object-fit: contain;
-
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
-  background: #ffffff;
-  border-radius: 999px;
-  padding: 4px 10px;
-  border: 1px solid rgba(0,0,0,0.03);
+ display: flex;
+  align-items: center;       /* Vertically center logos & multiplier */
+  gap: 14px;
+  background: #fff;          /* subtle white pill background */
+  padding: 6px 18px;
+  border-radius: 9999px;     /* nice round pill */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1); /* soft shadow */
+  border: 1px solid rgba(0,0,0,0.08);
+  max-width: fit-content;    /* shrink to content width */
+  user-select: none;         /* prevent accidental text selection */
+  font-weight: 600;
+  font-size: 14px;
+  color: #6e6e73;
 }
 
-    .hero-logos img {
-      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
-      background: #ffffff;
-      border-radius: 999px;
-      padding: 4px 10px;
-      border: 1px solid rgba(0,0,0,0.03);
-    }
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: auto;
+}
+
+.logo-wrapper img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+  border-radius: 9999px;
+}
+
+.logo-multiplier {
+  font-size: 22px;
+  color: #6e6e73;
+  user-select: none;
+}
 
     .hero-title {
       font-size: 30px;
@@ -742,7 +761,7 @@
             <div class="sub-heading">The AI moment</div>
             <ul class="bullet-list">
               <li>C‑level push to become an AI‑first company.</li>
-              <li>Knowledge and workflows fragmented across M365, ServiceNow, Snowflake, Secoda, and homegrown tools.</li>
+              <li>Knowledge and workflows fragmented across M365-Outlook, Sharepoint, OneDrive, ServiceNow, Snowflake, and homegrown tools.</li>
               <li>Risk of AI under‑delivering if it remains a set of disconnected, department‑level experiments.</li>
             </ul>
           </div>
@@ -764,7 +783,7 @@
           <div>
             <div class="sub-heading">What Glean does</div>
             <ul class="bullet-list">
-              <li>Connects to Microsoft 365, ServiceNow, Snowflake, Secoda, Salesforce, and key homegrown tools.</li>
+              <li>Connects to Microsoft 365, ServiceNow, Snowflake, Salesforce, and key homegrown tools.</li>
               <li>Builds a single enterprise graph and permissions model over DriveTime’s knowledge.</li>
               <li>Powers a DriveTime‑wide assistant plus department‑specific agents on top of that context.</li>
             </ul>
