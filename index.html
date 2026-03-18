@@ -107,13 +107,17 @@
       max-width: 720px;
     }
 
-    .hero-logos {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
+    .hero-logos img {
+  height: 40px;        /* controls size */
+  width: auto;         /* keeps proportions */
+  object-fit: contain;
+
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid rgba(0,0,0,0.03);
+}
 
     .hero-logos img {
       filter: drop-shadow(0 1px 2px rgba(0,0,0,0.12));
